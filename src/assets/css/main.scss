@@ -1,0 +1,44 @@
+    @charset "utf-8";
+    footer {
+        display: flex;
+        flex-direction: row;
+        div {
+            width: 25%;
+            display: inline-block;
+            text-align: center;
+            color: #666;
+            &.on {
+                color: red;
+            }
+            i.iconfont {
+                display: block;
+                font-size: 24px;
+            }
+        }
+    }
+    
+    header {
+        background-color: red;
+        height: 50px;
+        line-height: 50px;
+        span {
+            color: #fff;
+            width: 20%;
+            display: inline-block;
+            text-align: center;
+        }
+        .search {
+            outline: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: none;
+            height: 30px;
+            border-radius: 20px;
+            width: 75%;
+            background-image: url(../images/svg/search.svg);
+            background-size: 24px 24px;
+            background-position: 6px 3px;
+            background-repeat: no-repeat;
+            padding-left: 30px;
+        }
+    }
