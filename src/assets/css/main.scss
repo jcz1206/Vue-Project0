@@ -1,14 +1,16 @@
     @charset "utf-8";
     footer {
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
+        width: 100%;
         div {
             width: 25%;
-            display: inline-block;
+            // display: inline-block;
             text-align: center;
             color: #666;
+            flex: 1;
             &.on {
-                color: red;
+                color: #d22121;
             }
             i.iconfont {
                 display: block;
@@ -18,7 +20,7 @@
     }
     
     header {
-        background-color: red;
+        background-color: #d22121;
         height: 50px;
         line-height: 50px;
         span {

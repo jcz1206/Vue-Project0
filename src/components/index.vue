@@ -13,8 +13,11 @@
 
             </div>
             <!--轮播图-->
-            <div>
-
+            <div class="swiper-container">
+                <div class="swiper-wrapper" style="z-index:4;background-color: rgba(0,0,0,0);">
+                    <a href="" v-bind:for ="item in advert"><span v-attr:style="background-image:url('"+item.img+"')"></span></a>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
             <!--分类-->
             <div>
@@ -32,6 +35,7 @@
 <script>
 import headbar from '../components/headbar.vue'
 import footbar from '../components/footbar.vue'
+import Swiper from './assets/lib/swiper.js'
 export default {
   name: 'index',
   components: {
@@ -46,9 +50,9 @@ export default {
           {title:"",url:"",type:0}
       ],
       advert:[
-          {img:"",url:"",type:0},
-           {img:"",url:"",type:0},
-            {img:"",url:"",type:0}
+          {img:"1",url:"",type:0},
+          {img:"2",url:"",type:0},
+          {img:"3",url:"",type:0}
       ],
       catagory:[,
           {title:"",url:"",type:0},

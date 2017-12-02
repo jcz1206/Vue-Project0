@@ -1,22 +1,26 @@
 footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
 }
 footer div {
   width: 25%;
-  display: inline-block;
   text-align: center;
   color: #666;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 footer div.on {
-  color: red;
+  color: #d22121;
 }
 footer div i.iconfont {
   display: block;
@@ -24,7 +28,7 @@ footer div i.iconfont {
 }
 
 header {
-  background-color: red;
+  background-color: #d22121;
   height: 50px;
   line-height: 50px;
 }

@@ -4,6 +4,7 @@ var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
 var webpack = require("webpack")
+    // const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
@@ -59,7 +60,7 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 10000,
+                    limit: 100,
                     name: utils.assetsPath('img/[name].[ext]')
                         //utils.assetsPath('img/[name].[hash:7].[ext]')
                 }
@@ -72,10 +73,23 @@ module.exports = {
                     name: utils.assetsPath('fonts/[name].[ext]')
                         //utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
+                // },
+                // {
+                //     test: /\.css$/,
+                //     use: ExtractTextPlugin.extract({
+                //         fallback: "style-loader",
+                //         use: "css-loader"
+                //     })
             }
         ]
     },
+    // vue: {
+    //     loaders: {
+    //         css: ExtractTextPlugin.extract("css")
+    //     }
+    // },
     plugins: [
+        // new ExtractTextPlugin("style.css"),
         // new webpack.optimize.CommonsChunkPlugin('common.js'),
         new webpack.ProvidePlugin({
             jQuery: "jquery",

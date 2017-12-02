@@ -27,6 +27,6 @@ export default {
 <style>
 /*@import './assets/lib/share/css/share.min.css';*/
   @import './assets/css/normalize.css';
-  @import './assets/css/main.css';  
   @import './assets/iconfonts/iconfont.css'; 
+  @import './assets/css/main.css';  
 </style>
