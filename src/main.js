@@ -12,7 +12,7 @@ import router from './router'
 // import './assets/bootstrap/js/bootstrap.min.js'
 
 // require('./assets/css/main.scss')
-import '../assets/css/main1.scss'
+import './assets/css/main1.scss'
 import './assets/css/main.scss'
 Vue.config.productionTip = false
 
