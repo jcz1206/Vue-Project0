@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import SuperSlide from "../../assets/js/jquery.SuperSlide.2.1.2.js";
+import SuperSlide from "../../assets/lib/jquery.SuperSlide.2.1.2.js";
 export default {
   name: 'index',
   data () {
@@ -137,7 +137,7 @@ export default {
 </script>
 <!--
 <script>
-// import jQuery from "./assets/js/jquery.SuperSlide.2.1.2.js";
+// import jQuery from "./assets/lib/jquery.SuperSlide.2.1.2.js";
 // jQuery(".slideBox").slide({mainCell:".bd ul",effect:"left",delayTime:500,autoPlay:false, trigger:'click', vis:"auto"});
 </script>
 -->

@@ -13,8 +13,10 @@ function resolve(dir) {
 module.exports = {
     entry: {
         main: './src/main.js',
-        'jquery.SuperSlide.2.1.2': './src/assets/js/jquery.SuperSlide.2.1.2.js',
-        'layer': './src/assets/lib/layer/mobile/layer.js'
+        'jquery.SuperSlide.2.1.2': './src/assets/lib/jquery.SuperSlide.2.1.2.js',
+        'layer': './src/assets/lib/layer/mobile/layer.js',
+        'Swiper': './src/assets/lib/swiper.js', //这个js导报到单独文件,
+        'bootstrap': './src/assets/bootstrap/css/bootstrap.min.css' //这个js导报到单独文件
             // ["slide"]
     },
     output: {
@@ -80,6 +82,14 @@ module.exports = {
                 //         fallback: "style-loader",
                 //         use: "css-loader"
                 //     })
+                // },
+                // {
+                //     test: /\.scss$/,
+                //     loaders: ["style", "css", "sass"]
+                // },
+                // {
+                //     test: /.exec.js$/,
+                //     use: ['script-loader']
             }
         ]
     },

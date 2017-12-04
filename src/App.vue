@@ -26,7 +26,9 @@ export default {
 </script>
 <style>
 /*@import './assets/lib/share/css/share.min.css';*/
-  @import './assets/css/normalize.css';
-  @import './assets/iconfonts/iconfont.css'; 
-  @import './assets/css/main.css';  
+  /* @import './assets/css/normalize.css';
+  @import './assets/iconfonts/iconfont.css';  */
+</style>
+<style lang="scss">
+  // @import './assets/css/main.scss';  //这样能引入此css 但是svg文件无法解析 报错啦
 </style>

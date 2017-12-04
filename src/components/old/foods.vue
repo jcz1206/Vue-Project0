@@ -33,7 +33,7 @@
   }
 </style>
 <script>
-// import SuperSlide from "../assets/js/jquery.SuperSlide.2.1.2.js";
+// import SuperSlide from "../assets/lib/jquery.SuperSlide.2.1.2.js";
 export default {
   name: 'foods',
   data () {
