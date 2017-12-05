@@ -4,7 +4,11 @@ var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
 var webpack = require("webpack")
-    // const ExtractTextPlugin = require("extract-text-webpack-plugin")
+    //,
+    // precss = require('precss'),
+    // autoprefixer = require('autoprefixer'),
+    // ExtractTextPlugin = require("extract-text-webpack-plugin")
+
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
@@ -26,7 +30,7 @@ module.exports = {
             config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.js', '.vue', '.json', '.sass', '.scss'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
@@ -71,34 +75,15 @@ module.exports = {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 10000,
+                    limit: 100,
                     name: utils.assetsPath('fonts/[name].[ext]')
                         //utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
-                // },
-                // {
-                //     test: /\.css$/,
-                //     use: ExtractTextPlugin.extract({
-                //         fallback: "style-loader",
-                //         use: "css-loader"
-                //     })
-                // },
-                // {
-                //     test: /\.scss$/,
-                //     loaders: ["style", "css", "sass"]
-                // },
-                // {
-                //     test: /.exec.js$/,
-                //     use: ['script-loader']
             }
         ]
     },
-    // vue: {
-    //     loaders: {
-    //         css: ExtractTextPlugin.extract("css")
-    //     }
-    // },
     plugins: [
+        // new ExtractTextPlugin('[name].css'),
         // new ExtractTextPlugin("style.css"),
         // new webpack.optimize.CommonsChunkPlugin('common.js'),
         new webpack.ProvidePlugin({

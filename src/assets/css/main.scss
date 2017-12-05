@@ -1,28 +1,56 @@
     @charset "utf-8";
-    footer {
-        display: inline-flex;
-        flex-direction: row;
+    $mainColor:#d22121;
+    $fontColor:#666;
+    @mixin flex-row {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // display: -webkit-flex;
+        // -webkit-flex-wrap: wrap;
+        // flex-align: start;
+        // align-content: flex-start;
+        // flex-flow: row wrap;
+        // justify-content: flex-start;
+    }
+    
+    @mixin outlinenone {
+        outline: none;
+    }
+    
+    footer {
+        @include flex-row;
+        // display: inline-flex;
+        // flex-direction: row;
+        // width: 100%;
         div {
             width: 25%;
             // display: inline-block;
             text-align: center;
-            color: #666;
-            flex: 1;
+            color: $fontColor;
+            // flex-grow: 1;
+            // flex-shrink: 1;
+            // flex-basis: 0;
             &.on {
-                color: #d22121;
+                color: $mainColor;
             }
             i.iconfont {
                 display: block;
+                font-size: 26px;
+            }
+            i.icon-wodedingdan {
                 font-size: 24px;
             }
         }
     }
     
     header {
-        background-color: #d22121;
+        background-color: $mainColor;
         height: 50px;
-        line-height: 50px;
+        // line-height: 50px;
+        .header-wrap {
+            padding-top: 10px;
+        }
         span {
             color: #fff;
             width: 20%;
@@ -30,9 +58,7 @@
             text-align: center;
         }
         .search {
-            outline: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
+            @include outlinenone();
             border: none;
             height: 30px;
             border-radius: 20px;
@@ -46,15 +72,35 @@
     }
     
     .swiper-wrapper {
-        // a {
-        //     width: 100%;
-        // }
         span {
             display: inline-block;
-            width: 100%;
-            padding: 15.64% 0;
+            // width: 100%;
+            padding: 15.64% 50%;
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: contain;
+        }
+    }
+    
+    .category {
+        @include flex-row();
+        >div {
+            width: 20%;
+            text-align: center;
+            color: $fontColor;
+            //以下被注释的样式可以不用
+            // flex: 1;
+            // -webkit-flex: 1 1 20%;
+            div {
+                padding: 38% 50%;
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+            span {
+                color: $fontColor;
+                font-size: 12px;
+            }
         }
     }

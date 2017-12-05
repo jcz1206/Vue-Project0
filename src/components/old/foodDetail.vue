@@ -25,11 +25,10 @@
 </template>
 <style>
 /*@import '../assets/font-awesome/css/font-awesome.min.css';*/
-@import '../../assets/iconfont/style.css';
-/*<i class="fa fa-heart" aria-hidden="true"></i>*/
+/* @import '@/assets/iconfont/style.css'; */
 </style>
 <script>
-
+require('@/assets/iconfont/style.css')
 export default {
   name: 'foodDetail',
   data () {
