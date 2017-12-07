@@ -31,6 +31,22 @@
                 </div>
             </div>
             <!--优惠活动-->
+            <div class="txtMarquee-left">
+			<!-- <div class="hd">
+				<a class="next"></a>
+				<a class="prev"></a>
+			</div>
+			<div class="bd">
+				<div class="tempWrap" style="overflow:hidden; position:relative; width:654px"><ul class="infoList" style="width: 2180px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -342px;"><li class="clone" style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+					<li style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+					<li style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li>
+					<li style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+					<li style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+					<li style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+					<li style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+				<li class="clone" style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li><li class="clone" style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">施强：高端专业语言教学</a><span>[11-11]</span></li><li class="clone" style="float: left; width: 198px;"><a href="http://www.SuperSlide2.com" target="_blank">新加坡留学，国际双语课程</a><span>[11-11]</span></li></ul></div>
+			</div> -->
+		</div>
             <div>
             </div>
         </div>
@@ -38,11 +54,13 @@
     </div>
 </template>
 <script>
-require('../assets/lib/swiper-4.0.5/css/swiper.css')
+import '../assets/lib/swiper-4.0.5/css/swiper.css'
 import headbar from '@/components/headbar.vue'
 import footbar from '@/components/footbar.vue'
-import Swiper from '@/assets/lib/swiper-4.0.5/js/swiper'
-// import TouchSlide from '../assets/lib/TouchSlide1.1-00/TouchSlide.1.1'
+// import {Swiper} from '@/assets/lib/swiper-4.0.5/js/swiper'
+import {Swiper} from 'imports?jQuery=jquery!@/assets/lib/swiper-4.0.5/js/swiper.min'
+// require('@/assets/lib/SuperSlide2.1-demo-00/default.css')
+// import SuperSlide from '@/assets/lib/SuperSlide2.1-demo-00/jquery.SuperSlide.2.1.1'
 export default {
   name: 'index',
   components: {
@@ -92,6 +110,8 @@ export default {
                 },
             }
         });
+        // jQuery(".txtMarquee-left").slide( { mainCell:".bd ul", autoPlay:true,effect:'leftMarquee',vis:3,interTime:50,opp:false,pnLoop:true,trigger:click,mouseOverStop:true  });
+		
     // })
   },
   methods:{
